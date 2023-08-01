@@ -3,6 +3,8 @@ package com.example.evangelionanalyticsapp2
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -22,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    NavMenu()
                 }
             }
         }
@@ -40,17 +42,42 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 // Navigation Menu UI Interface- UI for the navigation menu the user uses
 //  to navigate between the different interfaces
 
+@Composable
 fun NavMenu(modifier: Modifier = Modifier) {
     /* TODO:  */
     // Home icon button
+    Column(
+        verticalArrangement = Arrangement.Top,
+        modifier = modifier) {
+        Text(
+            text = "[Home button icon]",
+            modifier = modifier
+        )
 
-    // Home page button
+        // Home page button
+        Text(
+            text = "Home",
+            modifier = modifier
+        )
 
-    // Overview page button
+        // Overview page button
+        Text(
+            text = "Overview",
+            modifier = modifier
+        )
 
-    // Episodes page button
+        // Episodes page button
+        Text(
+            text = "Episodes",
+            modifier = modifier
+        )
 
-    // Characters page button
+        // Characters page button
+        Text(
+            text = "Characters",
+            modifier = modifier
+        )
+    }
 
 }
 
