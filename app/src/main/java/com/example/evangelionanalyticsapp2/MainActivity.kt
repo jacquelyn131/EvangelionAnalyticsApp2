@@ -3,6 +3,8 @@ package com.example.evangelionanalyticsapp2
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -44,34 +46,38 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 fun NavMenu(modifier: Modifier = Modifier) {
     /* TODO:  */
     // Home icon button
-    Text(
-        text = "[Home button icon]",
-        modifier = modifier
-    )
+    Column(
+        verticalArrangement = Arrangement.Top,
+        modifier = modifier) {
+        Text(
+            text = "[Home button icon]",
+            modifier = modifier
+        )
 
-    // Home page button
-    Text(
-        text = "Home",
-        modifier = modifier
-    )
+        // Home page button
+        Text(
+            text = "Home",
+            modifier = modifier
+        )
 
-    // Overview page button
-    Text(
-        text = "Overview",
-        modifier = modifier
-    )
+        // Overview page button
+        Text(
+            text = "Overview",
+            modifier = modifier
+        )
 
-    // Episodes page button
-    Text(
-        text = "Episodes",
-        modifier = modifier
-    )
+        // Episodes page button
+        Text(
+            text = "Episodes",
+            modifier = modifier
+        )
 
-    // Characters page button
-    Text(
-        text = "Characters",
-        modifier = modifier
-    )
+        // Characters page button
+        Text(
+            text = "Characters",
+            modifier = modifier
+        )
+    }
 
 }
 
