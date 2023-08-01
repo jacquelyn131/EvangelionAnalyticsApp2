@@ -37,9 +37,22 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
-// Navigation Menu UI Interface
+// Navigation Menu UI Interface- UI for the navigation menu the user uses
+//  to navigate between the different interfaces
 
-/* TODO:  */
+fun NavMenu(modifier: Modifier = Modifier) {
+    /* TODO:  */
+    // Home icon button
+
+    // Home page button
+
+    // Overview page button
+
+    // Episodes page button
+
+    // Characters page button
+
+}
 
 // Home Page UI Interface
 @Composable
