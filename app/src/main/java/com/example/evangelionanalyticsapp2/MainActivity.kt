@@ -11,6 +11,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.evangelionanalyticsapp2.ui.theme.EvangelionAnalyticsApp2Theme
 
@@ -94,7 +95,17 @@ fun HomeScreen(modifier: Modifier = Modifier) {
         )
         // Scrape button
         Text(
-            text = "Press \neat a potato"
+            text = "Press \"Scrape\" to scrape data",
+            modifier = modifier
+        )
+        Text(
+            text = "[Scrape]",
+            modifier = modifier
+        )
+        // copyright
+        Text(
+            text = "copyright license",
+            modifier = modifier
         )
 
     }
