@@ -44,7 +44,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun NavMenu(modifier: Modifier = Modifier) {
-    /* TODO:  */
     // Home icon button
     Column(
         verticalArrangement = Arrangement.Top,
@@ -84,10 +83,18 @@ fun NavMenu(modifier: Modifier = Modifier) {
 // Home Page UI Interface
 @Composable
 fun HomeScreen(modifier: Modifier = Modifier) {
-    Text(
-        text = "Home Button",
-        modifier = modifier
-    )
+    // Column to hold all the elements
+    Column(
+        verticalArrangement = Arrangement.Top,
+        modifier = modifier) {
+        // Home button icon
+        Text(
+            text = "[Home Button icon]",
+            modifier = modifier
+        )
+        // 
+
+    }
 }
 
 // Episode Page UI Interface
