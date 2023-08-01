@@ -11,6 +11,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.evangelionanalyticsapp2.ui.theme.EvangelionAnalyticsApp2Theme
 
@@ -24,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    NavMenu()
+                    HomeScreen()
                 }
             }
         }
@@ -44,7 +45,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun NavMenu(modifier: Modifier = Modifier) {
-    /* TODO:  */
     // Home icon button
     Column(
         verticalArrangement = Arrangement.Top,
@@ -84,10 +84,31 @@ fun NavMenu(modifier: Modifier = Modifier) {
 // Home Page UI Interface
 @Composable
 fun HomeScreen(modifier: Modifier = Modifier) {
-    Text(
-        text = "Home Button",
-        modifier = modifier
-    )
+    // Column to hold all the elements
+    Column(
+        verticalArrangement = Arrangement.Top,
+        modifier = modifier) {
+        // Home button icon
+        Text(
+            text = "[Home Button icon]",
+            modifier = modifier
+        )
+        // Scrape button
+        Text(
+            text = "Press \"Scrape\" to scrape data",
+            modifier = modifier
+        )
+        Text(
+            text = "[Scrape]",
+            modifier = modifier
+        )
+        // copyright
+        Text(
+            text = "copyright license",
+            modifier = modifier
+        )
+
+    }
 }
 
 // Episode Page UI Interface
