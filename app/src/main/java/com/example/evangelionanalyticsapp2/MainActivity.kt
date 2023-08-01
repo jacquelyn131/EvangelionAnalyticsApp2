@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    NavMenu()
+                    HomeScreen()
                 }
             }
         }
@@ -92,7 +92,10 @@ fun HomeScreen(modifier: Modifier = Modifier) {
             text = "[Home Button icon]",
             modifier = modifier
         )
-        // 
+        // Scrape button
+        Text(
+            text = "Press \neat a potato"
+        )
 
     }
 }
