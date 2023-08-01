@@ -54,7 +54,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
 
 /* TODO: */
 
-// Character
+// Character Page UI Interface
 
 
 
