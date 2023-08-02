@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    CharacterResult()
+                    OverviewPage()
                 }
             }
         }
@@ -237,8 +237,38 @@ fun CharacterResult(modifier: Modifier = Modifier) {
 }
 
 // Overview Page UI Interface
-
-/*  TODO: */
+@Composable
+fun OverviewPage(modifier: Modifier = Modifier) {
+    Column(
+        verticalArrangement = Arrangement.Top,
+        modifier = modifier
+    ) {
+        Text(
+            text = "[Menu icon]",
+            modifier = modifier
+        )
+        Text(
+            text = "Neon Genesis Evangelion",
+            modifier = modifier
+        )
+        Text(
+            text = "The Show: ",
+            modifier = modifier
+        )
+        Text(
+            text = "- Num episodes: ",
+            modifier = modifier
+        )
+        Text(
+            text = "- Average rating: ",
+            modifier = modifier
+        )
+        Text(
+                text = "- Most frequent characters: ",
+        modifier = modifier
+        )
+    }
+}
 
 
 
