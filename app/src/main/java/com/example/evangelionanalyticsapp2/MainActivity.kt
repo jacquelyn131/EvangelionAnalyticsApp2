@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    EpisodePage()
+                    CharacterPage()
                 }
             }
         }
@@ -166,8 +166,39 @@ fun EpisodePage(modifier: Modifier = Modifier) {
 }
 
 // Character Page UI Interface
-
-/* TODO: */
+// Search for data about a specific character and display the data.
+@Composable
+fun CharacterPage(modifier: Modifier = Modifier) {
+    Column(
+        verticalArrangement = Arrangement.Top,
+        modifier = modifier
+    ) {
+        Text(
+            text = "[Menu Icon]",
+            modifier = modifier
+        )
+        Text(
+            text = "Generate data about a character: ",
+            modifier = modifier
+        )
+        Text(
+            text = "[Shinji]",
+            modifier = modifier
+        )
+        Text(
+            text = "[Kaji]",
+            modifier = modifier
+        )
+        Text(
+            text = "[Misato]",
+            modifier = modifier
+        )
+        Text(
+            text = "[Rei]",
+            modifier = modifier
+        )
+    }
+}
 
 // Overview Page UI Interface
 
