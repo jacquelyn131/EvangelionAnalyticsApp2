@@ -115,7 +115,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
 
 // User interface to fetch data about a specific episode
 @Composable
-fun EpisodePage(modifier: Modifier = modifier) {
+fun EpisodePage(modifier: Modifier = Modifier) {
     Column(
         verticalArrangement = Arrangement.Top,
         modifier = modifier
@@ -136,12 +136,29 @@ fun EpisodePage(modifier: Modifier = modifier) {
             text = "[Go button]",
             modifier = modifier
         )
+        // Output data here.
+        Text(
+            text = "\"The Ending World\"",
+            modifier = modifier
+        )
         Text(
             text = "- Duration: ",
             modifier = modifier
         )
         Text(
-            text = "Ending Theme: ",
+            text = "- Ending Theme: ",
+            modifier = modifier
+        )
+        Text(
+            text = "- Most frequent characters: ",
+            modifier = modifier
+        )
+        Text(
+            text = "- Average rating: ",
+            modifier = modifier
+        )
+        Text(
+            text = "- Episode rank: ",
             modifier = modifier
         )
 
