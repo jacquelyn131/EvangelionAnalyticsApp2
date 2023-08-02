@@ -237,8 +237,18 @@ fun CharacterResult(modifier: Modifier = Modifier) {
 }
 
 // Overview Page UI Interface
-
-/*  TODO: */
+@Composable
+fun OverviewPage(modifier: Modifier = Modifier) {
+    Column(
+        verticalArrangement = Arrangement.Top,
+        modifier = modifier
+    ) {
+        Text(
+            text = "[Menu icon]",
+            modifier = modifier
+        )
+    }
+}
 
 
 
