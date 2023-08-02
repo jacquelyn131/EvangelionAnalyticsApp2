@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    HomeScreen()
+                    EpisodePage()
                 }
             }
         }
@@ -113,7 +113,40 @@ fun HomeScreen(modifier: Modifier = Modifier) {
 
 // Episode Page UI Interface
 
-/* TODO: */
+// User interface to fetch data about a specific episode
+@Composable
+fun EpisodePage(modifier: Modifier = modifier) {
+    Column(
+        verticalArrangement = Arrangement.Top,
+        modifier = modifier
+    ) {
+        Text(
+            text = "[Menu Icon]",
+            modifier = modifier
+        )
+        Text(
+            text = "Generate data about an episode: ",
+            modifier = modifier
+        )
+        Text(
+            text = "25",
+            modifier = modifier
+        )
+        Text(
+            text = "[Go button]",
+            modifier = modifier
+        )
+        Text(
+            text = "- Duration: ",
+            modifier = modifier
+        )
+        Text(
+            text = "Ending Theme: ",
+            modifier = modifier
+        )
+
+    }
+}
 
 // Character Page UI Interface
 
