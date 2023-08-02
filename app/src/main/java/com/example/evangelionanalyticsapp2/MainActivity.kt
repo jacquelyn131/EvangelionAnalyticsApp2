@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -25,7 +26,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    EpisodePage()
+                    CharacterResult()
                 }
             }
         }
@@ -166,8 +167,74 @@ fun EpisodePage(modifier: Modifier = Modifier) {
 }
 
 // Character Page UI Interface
+// Search for data about a specific character.
+@Composable
+fun CharacterPage(modifier: Modifier = Modifier) {
+    Column(
+        verticalArrangement = Arrangement.Top,
+        modifier = modifier
+    ) {
+        Text(
+            text = "[Menu Icon]",
+            modifier = modifier
+        )
+        Text(
+            text = "Generate data about a character: ",
+            modifier = modifier
+        )
+        Text(
+            text = "[Shinji]",
+            modifier = modifier
+        )
+        Text(
+            text = "[Kaji]",
+            modifier = modifier
+        )
+        Text(
+            text = "[Misato]",
+            modifier = modifier
+        )
+        Text(
+            text = "[Rei]",
+            modifier = modifier
+        )
+    }
+}
 
-/* TODO: */
+// Character Result UI Interface
+// Display data about a specific character.
+@Composable
+fun CharacterResult(modifier: Modifier = Modifier) {
+    Column(
+        verticalArrangement = Arrangement.Top,
+        modifier = modifier
+    ) {
+        Text(
+            text = "[Menu icon]",
+            modifier = modifier
+        )
+        Text(
+            text = "Shinji Ikari",
+            modifier = modifier
+        )
+        Text(
+            text = "[Shinji picture]",
+            modifier = modifier
+        )
+        Text(
+            text = "- Age: ",
+            modifier = modifier
+        )
+        Text(
+            text = "- Num of episodes: ",
+            modifier = modifier
+        )
+        Text(
+            text = "- Average rating: ",
+            modifier = modifier
+        )
+    }
+}
 
 // Overview Page UI Interface
 
