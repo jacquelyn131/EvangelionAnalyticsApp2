@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -26,7 +27,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    OverviewPage()
+                    NavMenu()
                 }
             }
         }
@@ -50,11 +51,8 @@ fun NavMenu(modifier: Modifier = Modifier) {
     Column(
         verticalArrangement = Arrangement.Top,
         modifier = modifier) {
-        Text(
-            text = "[Home button icon]",
-            modifier = modifier
-        )
-
+        // call my button here
+        SimpleButton()
         // Home page button
         Text(
             text = "Home",
@@ -80,6 +78,15 @@ fun NavMenu(modifier: Modifier = Modifier) {
         )
     }
 
+}
+// simple button
+@Composable
+fun SimpleButton() {
+    Button(onClick = {
+        // your onClick code here
+    }) {
+        Text(text = "simple button")
+    }
 }
 
 // Home Page UI Interface
