@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    CharacterResult()
+                    OverviewPage()
                 }
             }
         }
@@ -299,10 +299,7 @@ fun OverviewPage(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Top,
         modifier = modifier
     ) {
-        Text(
-            text = "[Menu icon]",
-            modifier = modifier
-        )
+        HomeIconButton()
         Text(
             text = "Neon Genesis Evangelion",
             modifier = modifier
