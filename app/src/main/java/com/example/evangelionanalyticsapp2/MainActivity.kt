@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    NavMenu()
+                    HomeScreen()
                 }
             }
         }
@@ -78,12 +78,11 @@ fun HomeIconButton() {
         // your onClick code here
     }) {
         Image(
-            painterResource(id = R.drawable.ic_launcher_background),
+            painterResource(id = R.drawable.menu_icon),
             contentDescription = "some icon",
-            modifier = Modifier.size(20.dp)
+            modifier = Modifier.size(40.dp)
 
         )
-        Text(text = "[Home Icon]")
     }
 }
 // HOme button
