@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -26,7 +27,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    OverviewPage()
+                    CharacterPage()
                 }
             }
         }
@@ -50,36 +51,65 @@ fun NavMenu(modifier: Modifier = Modifier) {
     Column(
         verticalArrangement = Arrangement.Top,
         modifier = modifier) {
-        Text(
-            text = "[Home button icon]",
-            modifier = modifier
-        )
-
+        // call my button here
+        HomeIconButton()
         // Home page button
-        Text(
-            text = "Home",
-            modifier = modifier
-        )
+        HomeButton()
 
         // Overview page button
-        Text(
-            text = "Overview",
-            modifier = modifier
-        )
+        OverviewButton()
 
         // Episodes page button
-        Text(
-            text = "Episodes",
-            modifier = modifier
-        )
-
+        EpisodesButton()
         // Characters page button
-        Text(
-            text = "Characters",
-            modifier = modifier
-        )
+        CharactersButton()
     }
 
+}
+// HOme Icon button
+@Composable
+fun HomeIconButton() {
+    Button(onClick = {
+        // your onClick code here
+    }) {
+        Text(text = "[Home Icon]")
+    }
+}
+// HOme button
+@Composable
+fun HomeButton() {
+    Button(onClick = {
+        // your onClick code here
+    }) {
+        Text(text = "Home")
+    }
+}
+// Overview page button
+@Composable
+fun OverviewButton() {
+    Button(onClick = {
+        // your onClick code here
+    }) {
+        Text(text = "Overview")
+    }
+}
+// Episodes page button
+@Composable
+fun EpisodesButton() {
+    Button(onClick = {
+        // your onClick code here
+    }) {
+        Text(text = "Episodes")
+    }
+}
+// Characters page button
+@Composable
+fun CharactersButton() {
+    Button(onClick = {
+        // your onClick code here
+    }) {
+        Text(text = "Characters")
+    }
 }
 
 // Home Page UI Interface
@@ -90,8 +120,9 @@ fun HomeScreen(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Top,
         modifier = modifier) {
         // Home button icon
+        HomeIconButton()
         Text(
-            text = "[Home Button icon]",
+            text = "Eva Scraper",
             modifier = modifier
         )
         // Scrape button
@@ -99,16 +130,22 @@ fun HomeScreen(modifier: Modifier = Modifier) {
             text = "Press \"Scrape\" to scrape data",
             modifier = modifier
         )
-        Text(
-            text = "[Scrape]",
-            modifier = modifier
-        )
+        ScrapeButton()
         // copyright
         Text(
             text = "copyright license",
             modifier = modifier
         )
 
+    }
+}
+// Scrape Button
+@Composable
+fun ScrapeButton() {
+    Button(onClick = {
+        // your onClick code here
+    }) {
+        Text(text = "Scrape")
     }
 }
 
@@ -121,10 +158,7 @@ fun EpisodePage(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Top,
         modifier = modifier
     ) {
-        Text(
-            text = "[Menu Icon]",
-            modifier = modifier
-        )
+        HomeIconButton()
         Text(
             text = "Generate data about an episode: ",
             modifier = modifier
@@ -133,10 +167,7 @@ fun EpisodePage(modifier: Modifier = Modifier) {
             text = "25",
             modifier = modifier
         )
-        Text(
-            text = "[Go button]",
-            modifier = modifier
-        )
+        GoButton()
         // Output data here.
         Text(
             text = "\"The Ending World\"",
@@ -165,7 +196,15 @@ fun EpisodePage(modifier: Modifier = Modifier) {
 
     }
 }
-
+// Go button
+@Composable
+fun GoButton() {
+    Button(onClick = {
+        // your onClick code here
+    }) {
+        Text(text = "Go")
+    }
+}
 // Character Page UI Interface
 // Search for data about a specific character.
 @Composable
@@ -174,33 +213,53 @@ fun CharacterPage(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Top,
         modifier = modifier
     ) {
-        Text(
-            text = "[Menu Icon]",
-            modifier = modifier
-        )
+        HomeIconButton()
         Text(
             text = "Generate data about a character: ",
             modifier = modifier
         )
-        Text(
-            text = "[Shinji]",
-            modifier = modifier
-        )
-        Text(
-            text = "[Kaji]",
-            modifier = modifier
-        )
-        Text(
-            text = "[Misato]",
-            modifier = modifier
-        )
-        Text(
-            text = "[Rei]",
-            modifier = modifier
-        )
+        ShinjiButton()
+        KajiButton()
+        MisatoButton()
+        ReiButton()
     }
 }
-
+// Shinji button
+@Composable
+fun ShinjiButton() {
+    Button(onClick = {
+        // your onClick code here
+    }) {
+        Text(text = "Shinji")
+    }
+}
+// Kaji button
+@Composable
+fun KajiButton() {
+    Button(onClick = {
+        // your onClick code here
+    }) {
+        Text(text = "Kaji")
+    }
+}
+// Misato button
+@Composable
+fun MisatoButton() {
+    Button(onClick = {
+        // your onClick code here
+    }) {
+        Text(text = "Misato")
+    }
+}
+// Rei button
+@Composable
+fun ReiButton() {
+    Button(onClick = {
+        // your onClick code here
+    }) {
+        Text(text = "Rei")
+    }
+}
 // Character Result UI Interface
 // Display data about a specific character.
 @Composable
