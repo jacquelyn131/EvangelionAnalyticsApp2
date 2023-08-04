@@ -254,6 +254,11 @@ fun KajiButton() {
     Button(onClick = {
         // your onClick code here
     }) {
+        Image(
+            painterResource(id = R.drawable.kaji_pic),
+            contentDescription = "kaji ryuuji",
+            modifier = Modifier.size(200.dp)
+        )
         Text(text = "Kaji")
     }
 }
@@ -263,6 +268,11 @@ fun MisatoButton() {
     Button(onClick = {
         // your onClick code here
     }) {
+        Image(
+            painterResource(id = R.drawable.misato_pic),
+            contentDescription = "misato katsuragi",
+            modifier = Modifier.size(200.dp)
+        )
         Text(text = "Misato")
     }
 }
@@ -272,6 +282,11 @@ fun ReiButton() {
     Button(onClick = {
         // your onClick code here
     }) {
+        Image(
+            painterResource(id = R.drawable.rei_pic),
+            contentDescription = "rei ayanami",
+            modifier = Modifier.size(200.dp)
+        )
         Text(text = "Rei")
     }
 }
