@@ -52,12 +52,9 @@ fun NavMenu(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Top,
         modifier = modifier) {
         // call my button here
-        SimpleButton()
+        HomeButton()
         // Home page button
-        Text(
-            text = "Home",
-            modifier = modifier
-        )
+        HomeButton()
 
         // Overview page button
         Text(
@@ -79,13 +76,15 @@ fun NavMenu(modifier: Modifier = Modifier) {
     }
 
 }
-// simple button
+// HOme Icon button
+
+// HOme button
 @Composable
-fun SimpleButton() {
+fun HomeButton() {
     Button(onClick = {
         // your onClick code here
     }) {
-        Text(text = "simple button")
+        Text(text = "Home")
     }
 }
 
