@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    CharacterPage()
+                    CharacterResult()
                 }
             }
         }
@@ -268,10 +268,7 @@ fun CharacterResult(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Top,
         modifier = modifier
     ) {
-        Text(
-            text = "[Menu icon]",
-            modifier = modifier
-        )
+        HomeIconButton()
         Text(
             text = "Shinji Ikari",
             modifier = modifier
