@@ -240,6 +240,11 @@ fun ShinjiButton() {
     Button(onClick = {
         // your onClick code here
     }) {
+        Image(
+            painterResource(id = R.drawable.shinji_pic),
+            contentDescription = "shinji ikari",
+            modifier = Modifier.size(80.dp)
+        )
         Text(text = "Shinji")
     }
 }
