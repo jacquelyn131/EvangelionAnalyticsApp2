@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    CharacterPage()
+                    CharacterResult()
                 }
             }
         }
@@ -303,9 +303,10 @@ fun CharacterResult(modifier: Modifier = Modifier) {
             text = "Shinji Ikari",
             modifier = modifier
         )
-        Text(
-            text = "[Shinji picture]",
-            modifier = modifier
+        Image(
+            painterResource(id = R.drawable.shinji_pic),
+            contentDescription = "shinji ikari",
+            modifier = Modifier.size(200.dp)
         )
         Text(
             text = "- Age: ",
