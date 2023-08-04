@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.evangelionanalyticsapp2.ui.theme.EvangelionAnalyticsApp2Theme
 
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,7 +71,7 @@ fun NavMenu(modifier: Modifier = Modifier) {
     }
 
 }
-// HOme Icon button
+// Home Icon button
 @Composable
 fun HomeIconButton() {
     Button(onClick = {
