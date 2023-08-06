@@ -23,6 +23,13 @@ import com.example.evangelionanalyticsapp2.ui.theme.EvangelionAnalyticsApp2Theme
 
 
 class MainActivity : ComponentActivity() {
+    // my constants
+    val NAV_MENU: Int = 0
+    val HOME_SCREEN: Int = 1
+    val OVERVIEW_PAGE: Int = 2
+    val EPISODE_PAGE: Int = 3
+    val CHARACTER_PAGE: Int = 4
+    var currentView: Int = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -32,6 +39,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    currentView = 1
+
                     NavMenu()
                 }
             }
@@ -45,6 +54,13 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         text = "Hello $name!",
         modifier = modifier
     )
+}
+
+// Function for switching UI interfaces, inputs a UI id and displays that UI
+fun SwitchView(id: Int) {
+    when(id) {
+        0 ->
+    }
 }
 
 // Navigation Menu UI Interface- UI for the navigation menu the user uses
@@ -75,7 +91,7 @@ fun NavMenu(modifier: Modifier = Modifier) {
 @Composable
 fun HomeIconButton() {
     Button(onClick = {
-        // your onClick code here
+        currentView = 0
     }) {
         Image(
             painterResource(id = R.drawable.menu_icon),
