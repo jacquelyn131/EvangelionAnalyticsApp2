@@ -2,15 +2,16 @@ package com.example.evangelionanalyticsapp2
 
 class InterfaceState {
     var state = 0
-    fun InterfaceState() {
+    constructor() {
         state = 0
     }
-    fun getState(): Int {
+    fun getter(): Int {
         return state
     }
-    fun setState(s: Int) {
+    fun setter(s: Int) {
         state = s
     }
+
 
 
 }
