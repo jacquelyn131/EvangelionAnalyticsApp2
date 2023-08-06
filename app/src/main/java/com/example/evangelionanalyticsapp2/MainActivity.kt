@@ -21,7 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.evangelionanalyticsapp2.ui.theme.EvangelionAnalyticsApp2Theme
 
-
+var currentView: Int = 0
 class MainActivity : ComponentActivity() {
     // my constants
     val NAV_MENU: Int = 0
@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
     val OVERVIEW_PAGE: Int = 2
     val EPISODE_PAGE: Int = 3
     val CHARACTER_PAGE: Int = 4
-    var currentView: Int = 1
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -39,9 +39,16 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    // val state = InterfaceState()
                     currentView = 1
+                    when(currentView) {
+                        0 -> NavMenu() // NavMenu
+                        1 -> HomeScreen() // HomeScreen
+                        2 -> OverviewPage() // OverviewPage
+                        3 -> EpisodePage()  // EpisodePage
+                        4 -> CharacterPage() // CharacterPage
+                    }
 
-                    NavMenu()
                 }
             }
         }
@@ -57,13 +64,9 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 }
 
 // Function for switching UI interfaces, inputs a UI id and displays that UI
-fun SwitchView(id: Int) {
-    when(id) {
-        0 ->
-    }
-}
 
-// Navigation Menu UI Interface- UI for the navigation menu the user uses
+
+// Navigatin Menu UI Interface- UI for the navigation menu the user uses
 //  to navigate between the different interfaces
 
 @Composable
@@ -105,7 +108,7 @@ fun HomeIconButton() {
 @Composable
 fun HomeButton() {
     Button(onClick = {
-        // your onClick code here
+        currentView = 1
     }) {
         Text(text = "Home")
     }
@@ -160,6 +163,10 @@ fun HomeScreen(modifier: Modifier = Modifier) {
         // copyright
         Text(
             text = "copyright license",
+            modifier = modifier
+        )
+        Text(
+            text = "current view: $currentView",
             modifier = modifier
         )
 
